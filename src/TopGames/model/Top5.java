@@ -79,7 +79,13 @@ public abstract class Top5 {
 		System.out.println("***********************************************************");
 		System.out.println("Nome do Usuário: " + this.dono);
 		System.out.println("Plataforma escolhida : " + plataforma);
-		System.out.println("Jogos selecionados: "+ getJogos());
+		System.out.println("Jogos selecionados:");
+		int i = 5;
+		for (String jogo : getJogos()) {
+			
+		    System.out.println(i +" º Lugar " + jogo);
+		    i--;
+		}
 	}
 
 }
