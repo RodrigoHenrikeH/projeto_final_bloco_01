@@ -2,25 +2,26 @@ package TopGames.model;
 
 import java.util.Queue;
 
+
+
+
+
 public abstract class Top5 {
 
 	private int numero;
 	private int plataforma;
 	private String dono;
-	private String jogos;
+	private Queue<String> jogos;
 
-	public Top5(int numero, int plataforma, String dono, String jogos) {
-		this.numero = numero;
-		this.plataforma = plataforma;
-		this.dono = dono;
-		this.jogos = jogos;
-	}
-
-	public Top5(int numero2, int plataforma2, String dono2, Queue<String> jogos) {
-	}
+	public Top5(int numero, int plataforma, String dono, Queue<String> jogos) {
+        this.numero = numero; 
+        this.plataforma = plataforma;
+        this.dono = dono;
+        this.jogos = jogos;
+    }
 
 	public int getNumero() {
-		return numero;
+		return  numero;
 	}
 
 	public void setNumero(int numero) {
@@ -43,11 +44,11 @@ public abstract class Top5 {
 		this.dono = dono;
 	}
 
-	public String getJogos() {
+	public Queue<String> getJogos() {
 		return jogos;
 	}
 
-	public void setJogos(String jogos) {
+	public void setJogos(Queue<String> jogos) {
 		this.jogos = jogos;
 	}
 
@@ -78,7 +79,7 @@ public abstract class Top5 {
 		System.out.println("***********************************************************");
 		System.out.println("Nome do Usuário: " + this.dono);
 		System.out.println("Plataforma escolhida : " + plataforma);
-		System.out.println("Jogos selecionados: " + this.jogos);
+		System.out.println("Jogos selecionados: "+ getJogos());
 	}
 
 }

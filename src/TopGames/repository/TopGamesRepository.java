@@ -7,8 +7,8 @@ public interface TopGamesRepository {
 	
 	public void procurarPorNumero(int numero);
 	public void ListarTodos();
-	public void cadastrar();
-	public void atualizar();
-	public void deletar();
+	public void cadastrar(Top5 top5);
+	public void atualizar(Top5 top5);
+	public void deletar(int numero);
 	
 }
